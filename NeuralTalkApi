@@ -1,0 +1,12 @@
+
+# Example posting a local image file:
+
+import requests
+r = requests.post(
+    "https://api.deepai.org/api/neuraltalk",
+    files={
+        'image': open('/Users/Bhaskar/Documents/University of Louisiana at Lafayette/Stage.jpg', 'rb'),
+    },
+    headers={'api-key': 'bfc0f258-247a-46c2-ba46-87abdde95849'}
+)
+print(r.json())
